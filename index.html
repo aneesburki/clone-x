@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Helvetica;
+        }
+        body{
+            background-color: black;
+        }
+                                    /* Netflix Background Image */
+        .bg-netflix{
+            background-image: url(/images/netflix-background.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: rgba(0,0,0, 0.7);
+            background-blend-mode: darken;
+
+
+            
+        }
+                                      /* header */
+        header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4px 16px;
+            /* border: 2px solid red;
+            border-radius: 4px; */
+        }
+                                    /* Sign in (Anchor Tag is used) */
+        .sign-in{
+            background-color: red;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            color: white;
+            font-size: medium;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .sign-in:hover{
+            background-color: rgb(193, 29, 25);
+        }
+
+                                    /* Netflix Logo */
+        .logo{
+            max-width: 180px;
+        }
+
+
+    </style>
+
+<style>
+
+        .hero-parent{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 600px;
+            /* border: 2px solid red; */
+        }
+        .hero-child{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 300px; /* Don't see any effects, if removed or increased */
+            max-width: 600px;
+            /* border: 2px solid red; */
+            gap: 20px;
+        }
+
+
+        .hook-heading{
+            color: white;
+            font-style: normal;
+            font-size: 56px;
+            line-height: 70px;
+            font-weight: 900;
+            display: flex;
+            text-align: center;
+        }
+        .hook-para{
+            color: white;
+            font-style: normal;
+            font-size: 20px;
+            line-height: normal;
+            font-weight: 500px;
+        }
+        .hook-2-para{
+            color: white;
+            font-style: normal;
+            font-size: 16px; /* defualt size = 16px = 1em */
+            line-height: 24px;
+        }
+
+
+        .user-info{
+            display: flex;
+            gap: 10px;
+        }
+        .email-input{
+            border-style: none;
+            border: #666666 2px solid;
+            background-color: #1B1B1A;
+            padding: 1rem 3rem 1rem 1rem;
+            border-radius: 4px;
+        }
+        .email-input:focus{
+            outline: 2px solid white;
+        }
+        input::placeholder{
+            font-size: 16px;
+            color: #C5C5C5;
+        }
+        .button{
+            background-color: red;
+            color: white;
+            font-weight: 700;
+            font-size: medium;
+            padding: 1rem 3rem 1rem 2rem;
+            border-style: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .button:hover{
+            background-color: rgb(193, 29, 25);
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="bg-netflix">
+    <header>
+        <div class="lt-side">
+            <img src="/images/netflix-logo.png" alt="" class="logo">
+        </div>
+        <div class="rt-side">
+            <a href="" class="sign-in">Sign In</a>
+        </div>
+    </header>
+    <main class="main">
+
+        <div class="hero-parent">
+
+            <div class="hero-child">
+                <h1 class="hook-heading">Unlimited movies, TV shows, and more</h1>
+                <p class="hook-para">Starts at Rs 250. Cancel anytime.</p>
+                <p class="hook-2-para">Ready to watch? Enter your email to create or restart your membership.</p>
+                <div class="user-info">
+                    <input type="email" class="email-input" placeholder="Email address" required>
+                    <button type="button" class="button">Get Started</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </main>
+</body>
+</html>

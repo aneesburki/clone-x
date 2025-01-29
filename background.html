@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Background Image</title>
+    <style>
+*{
+            margin: 0;
+}
+h2{
+    color: white;
+}
+
+    /* First way */
+.netflix-bg-1{
+    background-image: url(/images/netflix-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    filter: brightness(50%); /* The Brightness of the image is halved. */
+
+    height: 100vh;
+    width: 100vw;
+}
+
+
+    /* Second Way */
+.netflix-bg-2{
+    background-image: url(/images/netflix-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0, 0.6);
+    background-blend-mode: darken;
+}
+
+    /* Third way */
+.netflix-bg-3{
+    background-image: url(/images/netflix-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; /*absolute will now be relative to this position */
+    height: 100vh;
+    width: 100vw;
+}
+.netflix-bg-3::before{
+    /* learn more about content css property */
+    content: '';
+    background-color: rgba(0,0,0, 0.8);
+    position: absolute; /* It should relative to the nearest parent element */
+    height: 100vh;
+    width: 100vw;
+}
+
+
+    </style>
+</head>
+
+
+<body>
+
+    <h1>Objective: How to make a background image darker and transparant.</h1>
+        <!-- For the First Way -->
+    <div class="netflix-bg-1">
+        <h2>Lorem ipsum dolor sit.</h2>
+    </div>
+        <!-- For the Second Way -->
+    <div class="netflix-bg-2">
+        <h2>Lorem ipsum dolor sit amet.</h2>
+    </div>
+        <!-- For the Third way -->
+    <div class="netflix-bg-3">
+        <h2>Lorem ipsum dolor sit amet.</h2>
+    </div>
+
+</body>
+
+</html>
