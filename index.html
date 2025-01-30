@@ -10,22 +10,23 @@
             padding: 0;
             box-sizing: border-box;
             font-family: Helvetica;
+            color: white;
         }
         body{
             background-color: black;
         }
-                                    /* Netflix Background Image */
+
+        /* Netflix Background Image */
         .bg-netflix{
             background-image: url(/images/netflix-background.jpg);
             background-repeat: no-repeat;
             background-size: cover;
             background-color: rgba(0,0,0, 0.7);
             background-blend-mode: darken;
-
-
-            
         }
-                                      /* header */
+
+
+        /* header */
         header{
             display: flex;
             align-items: center;
@@ -34,8 +35,9 @@
             /* border: 2px solid red;
             border-radius: 4px; */
         }
-                                    /* Sign in (Anchor Tag is used) */
-        .sign-in{
+
+        /* Sign in (Anchor Tag is used) */
+        .signin-btn{
             background-color: red;
             padding: 8px 16px;
             border-radius: 4px;
@@ -45,21 +47,20 @@
             font-weight: 600;
             cursor: pointer;
         }
-        .sign-in:hover{
+        .signin-btn:hover{
             background-color: rgb(193, 29, 25);
         }
 
-                                    /* Netflix Logo */
+        /* Netflix Logo */
         .logo{
             max-width: 180px;
         }
-
-
     </style>
 
-<style>
 
-        .hero-parent{
+    <style>
+        /* Hero Section */
+        .hero{
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -68,19 +69,20 @@
             height: 600px;
             /* border: 2px solid red; */
         }
-        .hero-child{
+        .hero-content{
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            gap: 20px;
             max-width: 300px; /* Don't see any effects, if removed or increased */
             max-width: 600px;
             /* border: 2px solid red; */
-            gap: 20px;
         }
 
 
-        .hook-heading{
+        /* Headings and Paragraphs */
+        .hero-title{
             color: white;
             font-style: normal;
             font-size: 56px;
@@ -89,25 +91,27 @@
             display: flex;
             text-align: center;
         }
-        .hook-para{
+        .hero-subtitle{
             color: white;
             font-style: normal;
             font-size: 20px;
             line-height: normal;
-            font-weight: 500px;
+            font-weight: 500;
         }
-        .hook-2-para{
+        .hero-text{
             color: white;
             font-style: normal;
             font-size: 16px; /* defualt size = 16px = 1em */
             line-height: 24px;
         }
 
-
-        .user-info{
+        /* User Input Section */
+        .input-div{
             display: flex;
             gap: 10px;
         }
+
+
         .email-input{
             border-style: none;
             border: #666666 2px solid;
@@ -122,7 +126,7 @@
             font-size: 16px;
             color: #C5C5C5;
         }
-        .button{
+        .hero-btn{
             background-color: red;
             color: white;
             font-weight: 700;
@@ -132,9 +136,62 @@
             border-radius: 4px;
             cursor: pointer;
         }
-        .button:hover{
+        .hero-btn:hover{
             background-color: rgb(193, 29, 25);
         }
+        
+        .main-section{
+            width: 100vw;
+            height: 1600px;
+            color: white;
+            border: 2px red solid;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .main-containers{
+            width: 90%;
+            height: 90%;
+            border: 4px blue solid;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .movies-list{
+            overflow-x: auto;
+            overflow-y: hidden;
+            border: 8px orange solid;
+        }
+
+
+        .reason-container{
+            display: flex;
+            gap: 20px;
+            border: 8px red solid;
+
+        }
+
+        .reason-item{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-image: linear-gradient(to right, #182044, #210E18);
+            max-width: 50%;
+            max-height: 50%;
+            border-radius: 8px;
+            padding: 1em;
+            max-width: 400px;
+            border: 4px gold solid;
+        }
+
+        .question-div{
+            border: red solid 2px;
+        }
+
+
 
     </style>
 </head>
@@ -146,25 +203,92 @@
             <img src="/images/netflix-logo.png" alt="" class="logo">
         </div>
         <div class="rt-side">
-            <a href="" class="sign-in">Sign In</a>
+            <a href="" class="signin-btn">Sign In</a>
         </div>
     </header>
-    <main class="main">
 
-        <div class="hero-parent">
+                <!-- Hero Section -->
+        <section class="hero">
 
-            <div class="hero-child">
-                <h1 class="hook-heading">Unlimited movies, TV shows, and more</h1>
-                <p class="hook-para">Starts at Rs 250. Cancel anytime.</p>
-                <p class="hook-2-para">Ready to watch? Enter your email to create or restart your membership.</p>
-                <div class="user-info">
+            <div class="hero-content">
+                <h1 class="hero-title">Unlimited movies, TV shows, and more</h1>
+                <h3 class="hero-subtitle">Starts at Rs 250. Cancel anytime.</h3>
+                <p class="hero-text">Ready to watch? Enter your email to create or restart your membership.</p>
+
+                <!-- Email Form -->
+                <div class="input-div">
                     <input type="email" class="email-input" placeholder="Email address" required>
-                    <button type="button" class="button">Get Started</button>
+                    <button type="button" class="hero-btn">Get Started</button>
                 </div>
             </div>
-
-        </div>
+        </section>
     </div>
-    </main>
+
+<!-- Main section for showcasing trending content and reasons to join -->
+        <section class="main-section">
+
+                <!-- Container for all content inside the section -->
+            <div class="main-containers">
+
+                    <!-- Trending Movies Section -->
+                    <h2>Trending Now</h2>
+                    <div class="movies-list">
+                        <img src="/images/money-heist.webp" class="movie-poster" alt="Money Heist">
+                        <img src="/images/alice-borderland.webp" class="movie-poster" alt="Alice in Borderland">
+                        <img src="/images/black-action.webp" class="movie-poster" alt="Black Action">
+                        <img src="/images/idk.webp" class="movie-poster" alt="IDK">
+                        <img src="/images/lucky-bashar.webp" class="movie-poster" alt="Lucky Bashar">
+                        <img src="/images/squid-game.webp" class="movie-poster" alt="Squid Game">
+                        <img src="/images/venom.webp" class="movie-poster" alt="Venom">
+                        <img src="/images/mission-impossible.webp" class="movie-poster" alt="Mission Impossible">
+                    </div>
+
+                    <!-- Reasons to Join Section -->
+                    <h2>More Reasons To Join</h2>
+
+                    <!-- Flex layout for reasons to join -->
+                    <div class="reason-container">
+                        <div class="reason-item">
+                            <h2 class="reason-title">Enjoy on your TV</h2>
+                            <p class="reason-description">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+                        </div>
+                        <div class="reason-item">
+                            <h2 class="reason-title">Download your shows to watch offline</h2>
+                            <p class="reason-description">Save your favorites easily and always have something to watch.</p>
+                        </div>
+                        <div class="reason-item">
+                            <h2 class="reason-title">Watch everywhere</h2>
+                            <p class="reason-description">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+                        </div>
+                        <div class="reason-item">
+                            <h2 class="reason-title">Create profiles for kids</h2>
+                            <p class="reason-description">Send kids on adventures with their favorite characters in a space made just for them — free with your membership.</p>
+                        </div> 
+                    </div>
+
+            <div class="question-div">
+            <h2>Frequently Asked Questions</h2>
+                <h3>What is Netflix?</h3>
+                <h3>How much does it cost?</h3>
+                <h3>Where can i Watch?</h3>
+                <h3>How can i Cancel?</h3>
+                <h3>What can i watch on Netflix?</h3>
+            </div>
+            
+            <p class="hero-text">Ready to watch? Enter your email to create or restart your membership.</p>
+            <div class="input-div">
+                <input type="email" class="email-input" placeholder="Email address" required>
+                <button type="button" class="hero-btn">Get Started</button>
+            </div>
+        </div>
+
+
+        </section>
+
+
+
+    <footer>
+
+    </footer>
 </body>
 </html>
