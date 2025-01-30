@@ -26,14 +26,27 @@
         }
 
 
+        /* positioning header */
+        .mega-header-div{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            /* border: red 2px solid; */
+
+        }
+
+        .header-div{
+            width: 90%;
+            /* border: red 2px solid; */
+        }
+
+
         /* header */
         header{
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 4px 16px;
-            /* border: 2px solid red;
-            border-radius: 4px; */
         }
 
         /* Sign in (Anchor Tag is used) */
@@ -161,9 +174,16 @@
         }
 
         .movies-list{
-            overflow-x: auto;
+            /* flexbox is neccesary for the overflow to work */
+            display: flex;
+            flex-direction: row;
+            overflow-x: scroll;
             overflow-y: hidden;
-            border: 8px orange solid;
+            gap: 40px;
+            /* border: 8px orange solid; */
+        }
+        .movie-poster{
+            border-radius: 8px;
         }
 
 
@@ -171,6 +191,8 @@
             display: flex;
             gap: 20px;
             border: 8px red solid;
+            width: 100%;
+            height: 17%;
 
         }
 
@@ -179,16 +201,25 @@
             flex-direction: column;
             gap: 10px;
             background-image: linear-gradient(to right, #182044, #210E18);
-            max-width: 50%;
-            max-height: 50%;
+            width: 100%;
+            height: 100%;
             border-radius: 8px;
             padding: 1em;
             max-width: 400px;
-            border: 4px gold solid;
+            /* border: 4px gold solid; */
         }
 
-        .question-div{
+        .faq-container{
             border: red solid 2px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 1em;
+            
+        }
+        .faq-question{
+            background-color: #2D2D2D;
+            padding: 1em;
         }
 
 
@@ -198,6 +229,9 @@
 <body>
     
     <div class="bg-netflix">
+        <!-- Header Section -->
+        <div class="mega-header-div">
+<div class="header-div">
     <header>
         <div class="lt-side">
             <img src="images/netflix-logo.png" alt="" class="logo">
@@ -206,6 +240,8 @@
             <a href="" class="signin-btn">Sign In</a>
         </div>
     </header>
+</div>
+</div>
 
                 <!-- Hero Section -->
         <section class="hero">
@@ -222,7 +258,9 @@
                 </div>
             </div>
         </section>
-    </div>
+
+    </div>         <!-- closing div tag of "bg-netflix" -->
+
 
 <!-- Main section for showcasing trending content and reasons to join -->
         <section class="main-section">
@@ -233,14 +271,14 @@
                     <!-- Trending Movies Section -->
                     <h2>Trending Now</h2>
                     <div class="movies-list">
-                        <img src="/images/money-heist.webp" class="movie-poster" alt="Money Heist">
-                        <img src="/images/alice-borderland.webp" class="movie-poster" alt="Alice in Borderland">
-                        <img src="/images/black-action.webp" class="movie-poster" alt="Black Action">
-                        <img src="/images/idk.webp" class="movie-poster" alt="IDK">
-                        <img src="/images/lucky-bashar.webp" class="movie-poster" alt="Lucky Bashar">
-                        <img src="/images/squid-game.webp" class="movie-poster" alt="Squid Game">
-                        <img src="/images/venom.webp" class="movie-poster" alt="Venom">
-                        <img src="/images/mission-impossible.webp" class="movie-poster" alt="Mission Impossible">
+                        <img src="images/money-heist.webp" class="movie-poster" alt="Money Heist">
+                        <img src="images/alice-borderland.webp" class="movie-poster" alt="Alice in Borderland">
+                        <img src="images/black-action.webp" class="movie-poster" alt="Black Action">
+                        <img src="images/idk.webp" class="movie-poster" alt="IDK">
+                        <img src="images/lucky-bashar.webp" class="movie-poster" alt="Lucky Bashar">
+                        <img src="images/squid-game.webp" class="movie-poster" alt="Squid Game">
+                        <img src="images/venom.webp" class="movie-poster" alt="Venom">
+                        <img src="images/mission-impossible.webp" class="movie-poster" alt="Mission Impossible">
                     </div>
 
                     <!-- Reasons to Join Section -->
@@ -264,24 +302,33 @@
                             <h2 class="reason-title">Create profiles for kids</h2>
                             <p class="reason-description">Send kids on adventures with their favorite characters in a space made just for them — free with your membership.</p>
                         </div> 
-                    </div>
 
-            <div class="question-div">
-            <h2>Frequently Asked Questions</h2>
-                <h3>What is Netflix?</h3>
-                <h3>How much does it cost?</h3>
-                <h3>Where can i Watch?</h3>
-                <h3>How can i Cancel?</h3>
-                <h3>What can i watch on Netflix?</h3>
+                    </div>          <!-- Closing Div Tag of "main-container" -->
+
+
+            <!-- FAQ Section -->
+        <div class="faq-section">
+
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+
+        <!-- Individual FAQ Items -->
+        <h3 class="faq-question">What is Netflix?</h3>
+        <h3 class="faq-question">How much does it cost?</h3>
+        <h3 class="faq-question">Where can I Watch?</h3>
+        <h3 class="faq-question">How can I Cancel?</h3>
+        <h3 class="faq-question">What can I watch on Netflix?</h3>
             </div>
+
+        </div>
             
             <p class="hero-text">Ready to watch? Enter your email to create or restart your membership.</p>
             <div class="input-div">
                 <input type="email" class="email-input" placeholder="Email address" required>
                 <button type="button" class="hero-btn">Get Started</button>
             </div>
-        </div>
 
+        </div>         <!-- Closing Div Tag of "main-containers" -->
 
         </section>
 
