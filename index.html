@@ -177,6 +177,8 @@
         .pre-movies-list{
             display: flex;
             flex-direction: column;
+            /* border: 2px red solid; */
+            height: 350px;
             gap: 20px;
         }
 
@@ -191,7 +193,17 @@
         }
         .movie-poster{
             border-radius: 8px;
+            width: 200px;
+            height: 270px;
         }
+
+        .movie-poster:hover{
+            width: 215px;
+            height: 285px;
+            transition: 200ms;
+            border: 1px solid white;
+        }
+
 
 
         .pre-reason-div{
@@ -417,9 +429,61 @@
 
         </section>
 
-
+<style>
+    .footer-section{
+        height: 500px;
+        border: red solid 2px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+            
+    }
+</style>
 
     <footer>
+
+        <section class="footer-section">
+
+            <div class="footer-items-whole">
+                <a href="">Questions? Contact us.</a>
+            </div>
+
+            <div>
+
+                <ul>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">Help Center</a></li>
+                    <li><a href="">Account</a></li>
+                    <li><a href="">Media Center</a></li>
+                    <li><a href="">Investor Relations</a></li>
+                    <li><a href="">Ways to Watch</a></li>
+                    <li><a href="">Terms of Use</a></li>
+                    <li><a href="">Privacy</a></li>
+                    <li><a href="">Cookie Preference</a></li>
+                    <li><a href="">Cooperate Information</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Speed Test</a></li>
+                    <li><a href="">Legal Notices</a></li>
+                    <li><a href="">Only on Netflix</a></li>
+                </ul>
+
+            </div>
+
+            <div>
+                <button class="btn-footer" type="button">
+                    <span>Sign</span><span>English</span><span>^</span>
+
+                </button>
+            </div>
+
+        <div>
+            <p>Netflix Pakistan</p>
+        </div>
+
+        <div>
+            <a href="" class="signin-btn">Get Started</a>
+        </div>
+    </section>
 
     </footer>
 </body>
