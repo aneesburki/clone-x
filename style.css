@@ -1,0 +1,406 @@
+/* Universal Reset: Remove default margin and padding for all elements, 
+   set box-sizing to border-box for consistent sizing, 
+   and apply Helvetica as the default font family */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+}
+
+/* Body Styling: Set the background color of the entire page to black */
+body {
+    background-color: black;
+}
+
+/* Netflix Background Image: 
+   Apply a Netflix-themed background image with a dark overlay for better readability */
+.bg-netflix {
+    background-image: url(images/netflix-background.jpg); /* Background image */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay with 70% opacity */
+    background-blend-mode: darken; /* Blend the background color with the image */
+}
+
+/* Positioning Header: 
+   Center the header content horizontally within the page */
+.mega-header-div {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center the header horizontally */
+    /* border: red 2px solid; */ /* Debugging border (commented out) */
+}
+
+/* Header Container: 
+   Set the width of the header to 90% of its parent container */
+.header-div {
+    width: 90%;
+    /* border: red 2px solid; */ /* Debugging border (commented out) */
+}
+
+/* Header Styling: 
+   Arrange header content (logo and sign-in button) in a row with space between them */
+header {
+    display: flex;
+    align-items: center; /* Vertically center items */
+    justify-content: space-between; /* Space out logo and sign-in button */
+    padding: 4px 16px; /* Add padding for spacing */
+}
+
+/* Sign-In Button: 
+   Style the sign-in button with a red background, white text, and rounded corners */
+.signin-btn {
+    background-color: red; /* Red background */
+    padding: 8px 16px; /* Padding for button size */
+    border-radius: 4px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    color: white; /* White text */
+    font-size: medium; /* Medium font size */
+    font-weight: 600; /* Semi-bold font weight */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+.signin-btn:hover {
+    background-color: rgb(193, 29, 25); /* Darker red on hover */
+}
+
+/* Netflix Logo: 
+   Set a maximum width for the Netflix logo to ensure it doesn't overflow */
+.logo {
+    max-width: 180px; /* Maximum width for the logo */
+}
+
+.pre-hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 600px;
+}
+/* Hero Section: 
+   Center the hero section content vertically and horizontally */
+.hero {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    width: 85%;
+    /* height: 500px; Fixed height for the hero section */
+    /* border: 2px solid red; */ /* Debugging border (commented out) */
+}
+
+/* Hero Content: 
+   Arrange hero content (title, subtitle, text, and input) in a column with spacing */
+.hero-content {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    gap: 20px; /* Spacing between elements */
+    max-width: 600px; /* Maximum width for the content */
+    /* border: 2px solid red; */ /* Debugging border (commented out) */
+}
+
+/* Headings and Paragraphs: 
+   Style the hero title, subtitle, and text with white color and appropriate font sizes */
+.hero-title {
+    color: white; /* White text */
+    font-style: normal; /* Normal font style */
+    font-size: 56px; /* Large font size */
+    line-height: 70px; /* Line height for readability */
+    font-weight: 900; /* Bold font weight */
+    display: flex;
+    text-align: center; /* Center-align text */
+}
+.hero-subtitle {
+    color: white; /* White text */
+    font-style: normal; /* Normal font style */
+    font-size: 20px; /* Medium font size */
+    line-height: normal; /* Default line height */
+    font-weight: 500; /* Medium font weight */
+}
+.hero-text {
+    color: white; /* White text */
+    font-style: normal; /* Normal font style */
+    font-size: 16px; /* Default font size */
+    line-height: 24px; /* Line height for readability */
+    text-align: center;
+}
+
+/* User Input Section: 
+   Arrange the email input and button in a row with spacing */
+.input-div {
+    display: flex;
+    flex-direction: row;
+    gap: 10px; /* Spacing between input and button */
+}
+
+/* Email Input: 
+   Style the email input field with a dark background and rounded corners */
+.email-input {
+    border-style: none; /* Remove default border */
+    border: #666666 2px solid; /* Add custom border */
+    background-color: #1B1B1A; /* Dark background */
+    padding: 1rem 3rem 1rem 1rem; /* Padding for input size */
+    border-radius: 4px; /* Rounded corners */
+}
+.email-input:focus {
+    outline: 2px solid white; /* White outline on focus */
+}
+input::placeholder {
+    font-size: 16px; /* Placeholder font size */
+    color: #C5C5C5; /* Placeholder text color */
+}
+
+/* Hero Button: 
+   Style the hero button with a red background and white text */
+.hero-btn {
+    background-color: red; /* Red background */
+    color: white; /* White text */
+    font-weight: 700; /* Bold font weight */
+    font-size: medium; /* Medium font size */
+    padding: 1rem 3rem 1rem 2rem; /* Padding for button size */
+    border-style: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+.hero-btn:hover {
+    background-color: rgb(193, 29, 25); /* Darker red on hover */
+}
+
+/* Main Section: 
+   Style the main content section with a top border and centered content */
+.main-section {
+    height: 1600px; /* Fixed height for the main section */
+    width: 100vw; /* Full viewport width */
+    border-top: 2px #CE2143 solid; /* Top border */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    color: white; /* White text */
+}
+
+/* Main Containers: 
+   Arrange the main content containers with spacing */
+.main-containers {
+    width: 80%; /* 80% width of the parent container */
+    height: 95%; /* 95% height of the parent container */
+    /* border: 2px blue solid; */ /* Debugging border (commented out) */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    gap: 22px; /* Spacing between containers */
+}
+
+/* Movies List: 
+   Create a horizontally scrollable list of movie posters */
+.movies-list {
+    display: flex;
+    flex-direction: row; /* Arrange posters in a row */
+    overflow: scroll; /* Enable horizontal scrolling */
+    gap: 40px; /* Spacing between posters */
+    height: 300px; /* Fixed height for the list */
+    /* border: 8px orange solid; */ /* Debugging border (commented out) */
+}
+.movies-list::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar */
+}
+
+/* Movie Poster: 
+   Style the movie posters with rounded corners and a hover effect */
+.movie-poster {
+    border-radius: 8px; /* Rounded corners */
+    width: 200px; /* Fixed width */
+    height: 270px; /* Fixed height */
+    transition: width, height 200ms; /* Smooth transition on hover */
+    /* border: 2px solid orange; */ /* Debugging border (commented out) */
+}
+.movie-poster:hover {
+    width: 215px; /* Slightly larger width on hover */
+    height: 285px; /* Slightly larger height on hover */
+}
+
+/* Reasons Block: 
+   Arrange the reason items in a row with spacing */
+.reason-container {
+    display: flex;
+    flex-direction: row; /* Arrange items in a row */
+    gap: 20px; /* Spacing between items */
+    min-height: 20%; /* Minimum height */
+    min-width: 100%; /* Full width */
+    /* border: 4px red solid; */ /* Debugging border (commented out) */
+}
+
+/* Reason Item: 
+   Style each reason item with a gradient background and rounded corners */
+.reason-item {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    gap: 10px; /* Spacing between elements */
+    background-image: linear-gradient(to right, #182044, #210E18); /* Gradient background */
+    border-radius: 16px; /* Rounded corners */
+    width: 25%; /* 25% width of the parent container */
+    height: 100%; /* Full height */
+    padding: 20px; /* Padding for spacing */
+    /* border: 2px gold solid; */ /* Debugging border (commented out) */
+}
+
+/* Reason Title: 
+   Style the title of each reason item */
+.reason-title {
+    font-weight: 500; /* Medium font weight */
+    font-size: 24px; /* Large font size */
+}
+
+/* Reason Description: 
+   Style the description of each reason item with semi-transparent text */
+.reason-description {
+    color: rgba(255, 255, 255, 0.7); /* Semi-transparent white text */
+    font-size: 16px; /* Medium font size */
+    font-weight: 400; /* Normal font weight */
+}
+
+/* Reason SVG: 
+   Position the SVG icon at the bottom-right of the reason item */
+.reason-svg {
+    display: flex;
+    justify-content: end; /* Align to the right */
+    align-items: end; /* Align to the bottom */
+}
+
+/* Frequently Asked Questions: 
+   Style the FAQ section with a column layout */
+.faq-section {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+}
+
+/* FAQ Title: 
+   Style the title of the FAQ section */
+.faq-title {
+    padding: 1em; /* Padding for spacing */
+    font-weight: 500; /* Medium font weight */
+}
+
+/* FAQ Container: 
+   Arrange the FAQ questions in a column with spacing */
+.faq-container {
+    display: flex;
+    flex-direction: column; /* Stack questions vertically */
+    gap: 10px; /* Spacing between questions */
+    padding: 1em; /* Padding for spacing */
+    /* border: red solid 2px; */ /* Debugging border (commented out) */
+}
+
+/* FAQ Question: 
+   Style each FAQ question with a dark background and hover effect */
+.faq-question {
+    background-color: #2D2D2D; /* Dark background */
+    padding: 1.2em; /* Padding for spacing */
+    font-size: 24px; /* Large font size */
+    font-weight: 400; /* Normal font weight */
+    font-style: normal; /* Normal font style */
+    transition: background-color 400ms; /* Smooth transition on hover */
+}
+.faq-question:hover {
+    background-color: #414141; /* Lighter background on hover */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Call to Action: 
+   Arrange the CTA content in a column with spacing */
+.cta-container {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center horizontally */
+    gap: 20px; /* Spacing between elements */
+    /* border: red solid 2px; */ /* Debugging border (commented out) */
+}
+
+/* Media Queries: 
+   Adjust layout for screens with a maximum width of 1000px */
+
+   @media screen and (max-width: 1280px) {
+    .header-div{
+        width: 95%
+    }
+    .hero-title{
+        font-size: 40px;
+        line-height: 50px;
+        font-weight: 700;
+    }
+    .hero-subtitle{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: normal;
+
+    }
+   }
+
+   @media screen and (max-width: 1000px) {
+    .reason-container {
+        display: flex;
+        flex-direction: column; /* Stack reason items vertically */
+        min-height: 55%; /* Adjust minimum height */
+    }
+    .reason-item {
+        width: 100%; /* Full width for each item */
+        height: 30%; /* Adjust height */
+    }
+}
+
+
+   @media screen and (max-width: 960px){
+        .header-div{
+            width: 100%;
+        }
+        .hero-title{
+            font-size: 32px;
+            line-height: 40px;
+        }
+
+
+
+   }
+
+   @media screen and (max-width: 600px) {
+    .input-div{
+        display: flex;
+        flex-direction: column;
+    }
+   }
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px red solid; */
+    min-height: 400px;
+}
+.footer-div{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 90%;
+    /* border: 2px green solid; */
+
+
+
+}
+.footer-links{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    flex-wrap: wrap;
+    width: 90%;
+    /* border: 2px yellow solid;    */
+}
+li{
+    list-style-type: none;
+}
+a{
+    color: #C0C0C0;
+    text-decoration: underline;
+}
