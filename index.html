@@ -4,7 +4,303 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Netflix</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Helvetica;
+            color: white;
+        }
+        body{
+            background-color: black;
+        }
+
+        /* Netflix Background Image */
+        .bg-netflix{
+            background-image: url(images/netflix-background.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: rgba(0,0,0, 0.7);
+            background-blend-mode: darken;
+        }
+
+
+        /* positioning header */
+        .mega-header-div{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            /* border: red 2px solid; */
+
+        }
+
+        .header-div{
+            width: 90%;
+            /* border: red 2px solid; */
+        }
+
+
+        /* header */
+        header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4px 16px;
+        }
+
+        /* Sign in (Anchor Tag is used) */
+        .signin-btn{
+            background-color: red;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            color: white;
+            font-size: medium;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .signin-btn:hover{
+            background-color: rgb(193, 29, 25);
+        }
+
+        /* Netflix Logo */
+        .logo{
+            max-width: 180px;
+        }
+    </style>
+
+
+    <style>
+        /* Hero Section */
+        .hero{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 600px;
+            /* border: 2px solid red; */
+        }
+        .hero-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            max-width: 300px; /* Don't see any effects, if removed or increased */
+            max-width: 600px;
+            /* border: 2px solid red; */
+        }
+
+
+        /* Headings and Paragraphs */
+        .hero-title{
+            color: white;
+            font-style: normal;
+            font-size: 56px;
+            line-height: 70px;
+            font-weight: 900;
+            display: flex;
+            text-align: center;
+        }
+        .hero-subtitle{
+            color: white;
+            font-style: normal;
+            font-size: 20px;
+            line-height: normal;
+            font-weight: 500;
+        }
+        .hero-text{
+            color: white;
+            font-style: normal;
+            font-size: 16px; /* defualt size = 16px = 1em */
+            line-height: 24px;
+        }
+
+        /* User Input Section */
+        .input-div{
+            display: flex;
+            gap: 10px;
+        }
+
+
+        .email-input{
+            border-style: none;
+            border: #666666 2px solid;
+            background-color: #1B1B1A;
+            padding: 1rem 3rem 1rem 1rem;
+            border-radius: 4px;
+        }
+        .email-input:focus{
+            outline: 2px solid white;
+        }
+        input::placeholder{
+            font-size: 16px;
+            color: #C5C5C5;
+        }
+        .hero-btn{
+            background-color: red;
+            color: white;
+            font-weight: 700;
+            font-size: medium;
+            padding: 1rem 3rem 1rem 2rem;
+            border-style: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .hero-btn:hover{
+            background-color: rgb(193, 29, 25);
+        }
+        
+        .main-section{
+            width: 100vw;
+            height: 1600px;
+            color: white;
+            border-top: 2px #CE2143 solid;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .main-containers{
+            width: 80%;
+            height: 95%;
+            /* border: 2px blue solid; */
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+        }
+
+
+        .pre-movies-list{
+            display: flex;
+            flex-direction: column;
+            /* border: 2px red solid; */
+            height: 350px;
+            gap: 20px;
+        }
+
+        .movies-list{
+            /* flexbox is neccesary for the overflow to work */
+            display: flex;
+            flex-direction: row;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            gap: 40px;
+            /* border: 8px orange solid; */
+        }
+        .movie-poster{
+            border-radius: 8px;
+            width: 200px;
+            height: 270px;
+        }
+
+        .movie-poster:hover{
+            width: 215px;
+            height: 285px;
+            transition: 200ms;
+            border: 1px solid white;
+        }
+
+
+
+        .pre-reason-div{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .reason-container{
+            display: flex;
+            gap: 20px;
+            height: 250px;
+            /* border: 8px red solid; */
+        }
+
+        .reason-item{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-image: linear-gradient(to right, #182044, #210E18);
+            width: 100%;
+            height: 100%;
+            border-radius: 16px;
+            padding: 1em;
+            /* border: 4px gold solid; */
+        }
+
+        .reason-title{
+            font-weight: 500;
+            font-size: 24px;
+
+        }
+
+        .reason-description{
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .svg{
+            display: flex;
+            justify-content: end;
+            align-items: end;
+        }
+
+
+        .faq-section{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .faq-title{
+            padding: 1em;
+            font-weight: 500;
+        }
+
+        .faq-container{
+            /* border: red solid 2px; */
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 1em;
+            
+        }
+        .faq-question{
+            background-color: #2D2D2D;
+            padding: 1.2em;
+            font-size: 24px;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .faq-question:hover{
+            background-color: #414141;
+            transition-duration: 300ms;
+            cursor: pointer;
+        }
+
+        .end-input-div{
+            /* border: red solid 2px; */
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .end-input{
+        /* border: 2px blue solid; */
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        }
+        
+
+
+
+
+
+
+    </style>
 </head>
 <body>
     
@@ -130,17 +426,28 @@
 
         </section>
 
+<style>
+    .footer-section{
+        height: 500px;
+        border: red solid 2px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+            
+    }
+</style>
 
-
-    <!-- Footer -->
     <footer>
 
+        <section class="footer-section">
 
-            <div class="footer-div">
+            <div class="footer-items-whole">
                 <a href="">Questions? Contact us.</a>
+            </div>
 
-            <!-- Footer links here -->
-                <ul class="footer-links">
+            <div>
+
+                <ul>
                     <li><a href="">FAQ</a></li>
                     <li><a href="">Help Center</a></li>
                     <li><a href="">Account</a></li>
@@ -157,10 +464,25 @@
                     <li><a href="">Only on Netflix</a></li>
                 </ul>
 
+            </div>
+
+            <div>
+                <button class="btn-footer" type="button">
+                    <span>Sign</span><span>English</span><span>^</span>
+
+                </button>
+            </div>
+
+        <div>
+            <p>Netflix Pakistan</p>
         </div>
 
+        <div>
+            <a href="" class="signin-btn">Get Started</a>
+        </div>
+    </section>
+
     </footer>
-    
 </body>
 </html>
 
